@@ -12,6 +12,7 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @ObservedObject var colors : ColorDetails
     @ObservedObject var data : OurData
     @State var email = ""
     
@@ -20,127 +21,33 @@ struct LoginView: View {
     var body: some View {
         NavigationView{
             
-            
-            
-            VStack{
-                
-                Text("Sign In")
-                
-                    .font(.title)
-                
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                
-                //Letter spacing
-                
-                    .kerning(1.9)
-                
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+            ZStack(alignment: .topLeading){
+                LinearGradient(gradient: Gradient(colors: [Color(colors.upperBlue), Color(colors.middleBlue), Color(colors.downBlue)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 
-                
-                //Email and Password
-                
-                VStack(alignment: .leading , spacing: 8, content: {
+                VStack{
+                    NavigationLink(destination: FirstView(data: data, colors: colors)){
+                        Text("Start").fontWeight(.heavy).font(.custom("PT Serif", size: 70)).foregroundColor(.white)
+                        //Text("\(data.albums.count)")}
+                            .frame(width: 280, height: 200, alignment: .center)
+                        
+                    }
+                    .background(Color(colors.startBox))
+                    .cornerRadius(20)
+                    .border(Color(colors.startBorder), width: 10)
+                    .shadow(color: Color(colors.startShadow), radius: 8)
                     
-                    Text("User Name")
-                    
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    
-                        .foregroundColor(.gray)
-                    
-                    
-                    
-                    TextField("emailaddress@gmail.com", text: $email)
-                    
-                    //Increasing FonSize and changeing text color
-                    
-                        .font(.system(size: 20, weight: .semibold))
-                    
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    
-                        .padding(.top,5)
-                    
-                    Divider()
-                    
-                })
-                
-                    .padding(.top,25)
-                
-                
-                
-                VStack(alignment: .leading , spacing: 8, content: {
-                    
-                    Text("Password")
-                    
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    
-                        .foregroundColor(.gray)
-                    
-                    
-                    
-                    SecureField("123456", text: $password)
-                    
-                    //Increasing FonSize and changeing text color
-                    
-                        .font(.system(size: 20, weight: .semibold))
-                    
-                        .foregroundColor(.blue)
-                    
-                        .padding(.top,5)
-                    
-                    Divider()
-                    
-                })
-                
-                    .padding(.top,20)
-                
-                
-                
-                //forgot password
-                
-                Button(action: {}, label: {
-                    
-                    Text("Forgot password?")
-                    
-                    
-                    
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    
-                })
-                
-                //This line will reduce the use of unwanted hstack and spacers
-                
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
-                
-                    .padding(.top,10)
-                
-                
-                
-                //next button
-                NavigationLink(destination: FirstView(data: data)){
-                    Text("Login")
-                    
-                    
+                }.frame(width: 370, height: 500, alignment: .center).padding(20)
+                VStack{
+                    VStack{
+                        Text("Manage the account").foregroundColor(.white).font(.custom("PT Serif", size: 20))                    }.frame(width: 370, height: 500, alignment: .bottom).padding(20)
                 }
                 
                 
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                
-                .padding(.top,10)
-                
             }
-            
-            .padding()
-            
-            
-            
         }
-        
-        
     }
 }
 

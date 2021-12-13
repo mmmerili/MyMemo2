@@ -6,6 +6,7 @@
 //
 
 import MapKit
+import SwiftUI
 
 enum mapDetails{
     static let startingLocation = CLLocationCoordinate2D(latitude: 60.192059, longitude: 24.945831)
@@ -16,6 +17,9 @@ final class MapViewModel: NSObject ,ObservableObject, CLLocationManagerDelegate{
     @Published var region = MKCoordinateRegion(center: mapDetails.startingLocation,
                                                span: mapDetails.defaultSpan)
     var locationManager: CLLocationManager?
+    
+    //var annotation = MKPointAnnotation()
+    //annotation = locationManager?.location!.coordinate
     
     func checkIfLocationServicesIsEnabled(){
         if CLLocationManager.locationServicesEnabled(){

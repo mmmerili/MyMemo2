@@ -26,6 +26,7 @@
 		6AEFD069275F9EEA00DC2415 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFD068275F9EEA00DC2415 /* LoginView.swift */; };
 		6AEFD0792760B0DF00DC2415 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFD0782760B0DF00DC2415 /* MapView.swift */; };
 		6AEFD07B2760CD4900DC2415 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFD07A2760CD4900DC2415 /* MapViewModel.swift */; };
+		6AEFD07D2764ACCD00DC2415 /* LoginViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFD07C2764ACCC00DC2415 /* LoginViewSecond.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		6AEFD068275F9EEA00DC2415 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6AEFD0782760B0DF00DC2415 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6AEFD07A2760CD4900DC2415 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		6AEFD07C2764ACCC00DC2415 /* LoginViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSecond.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				6AEFD068275F9EEA00DC2415 /* LoginView.swift */,
 				6AEFD0782760B0DF00DC2415 /* MapView.swift */,
 				6AEFD07A2760CD4900DC2415 /* MapViewModel.swift */,
+				6AEFD07C2764ACCC00DC2415 /* LoginViewSecond.swift */,
 			);
 			path = MusicApp;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				6AEFD065275F8B0700DC2415 /* Colors.swift in Sources */,
 				6AEFD0792760B0DF00DC2415 /* MapView.swift in Sources */,
 				6A175137274A7DC400B4717B /* AppDelegate.swift in Sources */,
+				6AEFD07D2764ACCD00DC2415 /* LoginViewSecond.swift in Sources */,
 				6AEFD069275F9EEA00DC2415 /* LoginView.swift in Sources */,
 				6A2DD79B274D20F8003B7146 /* PlayerView.swift in Sources */,
 				6AEFD07B2760CD4900DC2415 /* MapViewModel.swift in Sources */,
