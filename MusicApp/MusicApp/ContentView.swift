@@ -33,7 +33,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                Text("\(data.albums.count)")
+                //Text("\(data.albums.count)")
                 ScrollView(.horizontal, showsIndicators: false, content: {
                     LazyHStack{
                         ForEach(self.data.albums, id: \.self, content: {
@@ -90,7 +90,7 @@ struct SongCell : View {
         NavigationLink(destination: PlayerView(album: album, song: song), label: {
             HStack {
                 ZStack{
-                    Circle().frame(width: 50, height: 50, alignment: .center).foregroundColor(.blue)
+                    Circle().frame(width: 50, height: 50, alignment: .center).foregroundColor(Color(hexStringToUIColor(hex: "#3e8dd6")))
                     Circle().frame(width: 20, height: 20, alignment: .center).foregroundColor(.white)
                 }
                 Text(song.name).bold()

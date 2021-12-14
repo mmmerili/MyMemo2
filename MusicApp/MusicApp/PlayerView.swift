@@ -23,7 +23,7 @@ struct PlayerView : View {
     var body: some View{
         ZStack{
             Image(album.image).resizable().edgesIgnoringSafeArea(.all)
-            Blur(style: .dark).edgesIgnoringSafeArea(.all)
+            Blur(style: .light).edgesIgnoringSafeArea(.all)
             VStack{
                 Spacer()
                 AlbumImage(album: album, isWithText: false)
@@ -35,7 +35,7 @@ struct PlayerView : View {
                         Button(action: self.previous, label:
                                 {Image(systemName: "arrow.left.circle").resizable()}).frame(width: 50, height: 50, alignment: .center).foregroundColor(Color.black.opacity(0.2))
                         Button(action: self.playPause, label:
-                                {Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill").resizable()}).frame(width: 70, height: 70, alignment: .center).padding()
+                                {Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill").resizable()}).frame(width: 70, height: 70, alignment: .center).padding().foregroundColor(Color(hexStringToUIColor(hex: "#3e8dd6")))
                         Button(action: self.next, label:
                                 {Image(systemName: "arrow.right.circle").resizable()}).frame(width: 50, height: 50, alignment: .center).foregroundColor(Color.black.opacity(0.2))
                     }
